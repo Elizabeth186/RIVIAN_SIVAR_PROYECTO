@@ -16,7 +16,7 @@ function Splash({navigation}){
 return(
   <View style={{ alignItems:'center'}}>
       <Image  
-       style={{marginTop:'90%', width: 210, height: 140, marginBottom: 15 }}
+       style={{ width:'100%', height: '100%', marginBottom: 15 }}
         source={require("./assets/Logo.png") }/>
   </View>
 )
