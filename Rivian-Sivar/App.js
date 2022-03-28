@@ -10,20 +10,16 @@ import HomeScreen from './HomeScreen';
 function Splash({navigation}){
 
     setTimeout(()=>{
-       navigation.navigate('Home')
+       navigation.navigate('Login')
             }, 3000);
-
 
 return(
   <View style={{ alignItems:'center'}}>
       <Image  
        style={{marginTop:'90%', width: 210, height: 140, marginBottom: 15 }}
         source={require("./assets/Logo.png") }/>
-
-
   </View>
 )
-
 }
 
 const Stack = createNativeStackNavigator();
@@ -31,12 +27,21 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen  name="splash" options={{headerShown: false}} component={Splash} />
-        <Stack.Screen name="Home" component={LoginScreen} />
+        <Stack.Screen  name="splash" 
+        options={{headerShown: false}}
+        
+         component={Splash}/> 
+        <Stack.Screen name="Login"
+        component={LoginScreen}
+        options={{ headerShown: false }}  />
+         <Stack.Screen name="Home"
+        component={HomeScreen} 
+        options={{ headerShown: false }} />
       </Stack.Navigator>
     </NavigationContainer>
   );
 }
+
 
 const styles = StyleSheet.create({
   container: {
