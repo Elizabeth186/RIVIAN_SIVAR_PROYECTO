@@ -1,29 +1,15 @@
-import React from 'react'
-import { Text, View, TouchableOpacity, StyleSheet,Image } from 'react-native'
-import { useNavigation } from '@react-navigation/core'
-import { auth } from './firebase'
-import { SafeAreaView } from 'react-native-safe-area-context'
-import { backgroundColor, color } from 'react-native/Libraries/Components/View/ReactNativeStyleAttributes'
-import Navigation from './Navigation';
-import UserContext from './UserContext';
+import React from 'react';
+import { SafeAreaView, Text, View, Image, TouchableOpacity, StyleSheet } from 'react-native';
+import { useNavigation } from '@react-navigation/core';
+import { auth } from './firebase';
+const Home =(props) => {
 
 
-const HomeScreen =(props) => {
-
-  const navigation = useNavigation()
-
-  // const SignOut = () => {
-  //   auth
-  //     .signOut()
-  //     .then(() => {
-  //       navigation.replace("Login")
-  //     })
-  //     .catch(error => alert(error.message)) }
 
   return (
-    <UserContext.Provider value={props.authData}>
-    
-      {/* <View style={styles.containerLogo}>
+    <SafeAreaView style={styles.container} >
+
+    <View style={styles.containerLogo}>
         <Image style={styles.logo} 
         source={require("./assets/LogoSivar.png") }/>
       
@@ -37,27 +23,19 @@ const HomeScreen =(props) => {
       </View>
       <View style={styles.viewsansalvador}>
         
-      </View> */}
-     {/* <View >
-     <TouchableOpacity style={styles.btn}
-       onPress={SignOut}>
-       <Text>Cerrar Sesion</Text>
-     </TouchableOpacity>
-  </View> */}
-  
-      <Navigation {...props}/>
-    </UserContext.Provider>
+      </View>
 
+    </SafeAreaView>
   )
 }
     
 
-export default HomeScreen
+export default Home
 const styles = StyleSheet.create({
 container:{
   flex: 1,
   alignItems:'center',
-  alignContent:'center'
+  paddingTop:'30%'
 },
 containerLogo:{
 width:'100%',
@@ -102,6 +80,3 @@ fontSize:16,
 color:'#307B8C'
 }
 })
-
-
-
