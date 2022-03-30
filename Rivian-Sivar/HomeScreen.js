@@ -5,6 +5,8 @@ import { auth } from './firebase'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { backgroundColor, color } from 'react-native/Libraries/Components/View/ReactNativeStyleAttributes'
 
+
+
 const HomeScreen =() => {
 
   const navigation = useNavigation()
@@ -96,3 +98,6 @@ fontSize:16,
 color:'#307B8C'
 }
 })
+
+
+
