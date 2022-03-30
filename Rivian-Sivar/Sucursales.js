@@ -2,9 +2,7 @@ import React from 'react';
 import { SafeAreaView, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/core';
 import { auth } from './firebase';
-import Navigation from './Navigation';
-import UserContext from './UserContext';
-const HomeScreen =(props) => {
+const Sucursales =() => {
 
   const navigation = useNavigation()
 
@@ -18,25 +16,14 @@ const HomeScreen =(props) => {
   }
 
   return (
-    <UserContext.Provider value={props.authData}>
-      <Navigation {...props}/>
-    </UserContext.Provider>
-  )
-/*
-  return (
     <SafeAreaView style={styles.container}>
-      <TouchableOpacity style={styles.btn}
-        onPress={SignOut}
-       
-      >
-        <Text>Cerrar Sesion</Text>
-      </TouchableOpacity>
+        <Text>Sucursales</Text>
     </SafeAreaView>
-  )*/
+  )
 }
     
 
-export default HomeScreen
+export default Sucursales
 const styles = StyleSheet.create({
 container:{
   flex: 1,
