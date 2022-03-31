@@ -2,6 +2,7 @@ import { useNavigation } from '@react-navigation/core'
 import React, { useEffect, useState } from 'react'
 import { KeyboardAvoidingView, StyleSheet, Text,
    TextInput, TouchableOpacity, View, Image } from 'react-native'
+import { SafeAreaView } from 'react-navigation'
 import { auth } from './firebase'
 
 const LoginScreen = () => {
@@ -41,6 +42,7 @@ const LoginScreen = () => {
   return (
     
     <KeyboardAvoidingView
+    
         style={styles.container}
         keyboardVerticalOffset={-100000}>
      <View
@@ -105,9 +107,10 @@ export default LoginScreen
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop:40,
+    marginTop: '6%',
     alignItems: 'center',
-    backgroundColor: '#ffffff'
+    backgroundColor: '#ffffff',
+    
   },
  View1:{
 width: 300,
@@ -205,7 +208,6 @@ marginLeft:40,
   Viewimg:{
     width:'100%',
      height:'30%',
-    alignItems:'center'
   },
   ImgPrincipal:{
     width:'100%',
