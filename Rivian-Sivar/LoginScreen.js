@@ -2,7 +2,6 @@ import { useNavigation } from '@react-navigation/core'
 import React, { useEffect, useState } from 'react'
 import { KeyboardAvoidingView, StyleSheet, Text,
    TextInput, TouchableOpacity, View, Image } from 'react-native'
-import { SafeAreaView } from 'react-navigation'
 import { auth } from './firebase'
 
 const LoginScreen = () => {
