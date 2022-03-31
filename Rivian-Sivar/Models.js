@@ -2,9 +2,9 @@ import React from 'react';
 import { SafeAreaView, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/core';
 import { auth } from './firebase';
-const Sucursales =() => {
+const Models =() => {
 
-  // const navigation = useNavigation()
+  //const navigation = useNavigation()
 
   // const SignOut = () => {
   //   auth
@@ -17,13 +17,15 @@ const Sucursales =() => {
 
   return (
     <SafeAreaView style={styles.container}>
-        <Text>aSucursales</Text>
+
+        <Text>ASDASD</Text>
+
     </SafeAreaView>
   )
 }
     
 
-export default Sucursales
+export default Models
 const styles = StyleSheet.create({
 container:{
   flex: 1,
