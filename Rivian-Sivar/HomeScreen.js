@@ -154,7 +154,7 @@ export default function  HomeScreen() {
             source={require("./assets/station.png")  }/>
       </TouchableOpacity>
       <TouchableOpacity style={styles.santatecla1}  onPress={ ()=>{ Linking.openURL('https://g.page/PlazaMalta?share')}}>
-        <Text style={styles.txtsantatecla2} >Plaza Malta</Text>
+        <Text style={styles.txtsantatecla2} >Comercial Plaza Malta</Text>
         <Image style={styles.images}
             source={require("./assets/electrics.png")  }/>
       </TouchableOpacity>
@@ -197,7 +197,7 @@ alignItems:'center',
 borderRadius:12
 },
 textsuperior:{
-fontSize: 25,
+fontSize: 30,
 borderTopLeftRadius:5,
 borderTopRightRadius:5,
 backgroundColor:'#0E4C59',
@@ -207,14 +207,16 @@ textAlign:'center'
 },
 textinferior:{
 fontSize:16,
-color:'#307B8C'
+color:'#307B8C',
+fontSize: 20,
+fontWeight:'bold'
 },
  posterImage: {
   width: "100%",
   height: ancho_del_contenedor * 1.2,
   resizeMode: "cover",
   borderRadius: 20,
-  marginBottom:'15%'
+  marginBottom:'60%'
  
 },
 viewrecargas:{
@@ -243,7 +245,7 @@ viewrecargas2:{
 },
       santaana1:{
         backgroundColor:'#8EBF24',
-        width:'30%',
+        width:'40%',
         height:'100%',
         borderColor:'#0E4C59',
         borderWidth:2,
@@ -255,22 +257,23 @@ viewrecargas2:{
           width:"100%",
           alignItems:'center',
           marginTop:"5%",
-          height:'8%'
+          height:'15%'
         },
         txtCasaverde:{
           marginTop:'5%',
           marginRight:'3%',
           textAlign:'center',
-          color:'#0E4C59'
+          color:'#0E4C59',
+          fontSize: 20
         },
         images:{
           padding:12,
           height: '50%',
-          width:'30%',
-          marginTop:'5%'
+          width:'50%',
+          marginTop:'10%',
         },
         santatecla:{
-          height:'8%',
+          height:'15%',
           width:'100%',
           flexDirection:'row',
           alignSelf:'center',
@@ -281,28 +284,31 @@ viewrecargas2:{
           santatecla1:{
           alignItems:'center',
             backgroundColor:'#8EBF24',
-            width:'30%',
+            width:'40%',
             height:'100%',
             borderColor:'#0E4C59',
             borderWidth:2,
             borderRadius:15,
-            marginLeft:'12%',
+            marginLeft:'6%',
             elevation:20
             },
       txtsantatecla1:{
         marginTop:'5%',
         marginRight:'6%',
         textAlign:'center',
-        color:'#0E4C59'
+        color:'#0E4C59',
+        fontSize: 20
       },
       txtsantatecla2:{
         marginTop:'5%',
         marginRight:'6%',
-        color:'#0E4C59'
+        color:'#0E4C59',
+        fontSize: 20,
+        textAlign:'center'
       
       },
       textDepartamento:{
-        fontSize:25,
+        fontSize:30,
         color:'#ffffff',
         textAlign:'center'
       }
