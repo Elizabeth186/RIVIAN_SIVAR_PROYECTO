@@ -10,10 +10,10 @@ const Home =(props) =>{
 // arrglo de imagenes
 const imagenes = [
   
-  "https://scontent.fsal2-1.fna.fbcdn.net/v/t39.30808-6/277720857_100995932581765_2829213241870941392_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=730e14&_nc_ohc=hLj2Xi1rrzQAX_vtPZ5&_nc_ht=scontent.fsal2-1.fna&oh=00_AT8ZdT2yeJmHjC4fAJFhhISwwdeTYVsxuR6ORYoRxrODpw&oe=624A78EB",
-  "https://scontent.fsal3-1.fna.fbcdn.net/v/t39.30808-6/277677565_100995885915103_2667303007069290449_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=730e14&_nc_ohc=UAQxP2HOg6QAX_eGvEc&_nc_ht=scontent.fsal3-1.fna&oh=00_AT8b6oT3ziG7MDqfl4G_6w344kvBtEzwafgMCcY_iBDHOw&oe=6249991B",
-  "https://scontent.fsal2-1.fna.fbcdn.net/v/t39.30808-6/277723457_100995905915101_960760174018062666_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=730e14&_nc_ohc=iZyufFRRz_IAX-vj0sL&tn=94r7wMOG4VBOU18E&_nc_ht=scontent.fsal2-1.fna&oh=00_AT8-jw8jP-uDappXAmtnGgBh3dRgsgLIb7U-k_0ekYBu9A&oe=624939B1",
-  "https://scontent.fsal2-1.fna.fbcdn.net/v/t39.30808-6/277734474_100995962581762_7548344566621942817_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=730e14&_nc_ohc=z7FfDc2vfLIAX-EZ4CO&_nc_ht=scontent.fsal2-1.fna&oh=00_AT9-x1HgpEl1qGPhKHmRuj_v8vz2XPfUReIvkj8r5IGigA&oe=6248C374",
+  "https://scontent.fsal3-1.fna.fbcdn.net/v/t39.30808-6/277727331_101439585870733_848852093796842867_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=730e14&_nc_ohc=WzL706-b4rUAX88y4iv&_nc_ht=scontent.fsal3-1.fna&oh=00_AT9dgzv-XRwKpmVVvRL6RX3vJke7z1eDu1svSfqk88DZCA&oe=624A8A55",
+  "https://scontent.fsal2-1.fna.fbcdn.net/v/t39.30808-6/277761523_101439602537398_4040562502174153354_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=730e14&_nc_ohc=UjcQdVOxXu8AX8SCSUT&_nc_ht=scontent.fsal2-1.fna&oh=00_AT8fy4jPiNy2Bm2msVWUZLkwzMUTh7A-7zUnBbEITuTL8A&oe=624A73B6",
+  "https://scontent.fsal2-1.fna.fbcdn.net/v/t39.30808-6/277764841_101439565870735_8606014096617798462_n.jpg?_nc_cat=100&ccb=1-5&_nc_sid=730e14&_nc_ohc=uG5iKverWsMAX-T2CTC&_nc_ht=scontent.fsal2-1.fna&oh=00_AT_rsFKSRBZz4EmhlPsbsU119RO_HXSKKAjWIRRqoik7QA&oe=624AF62E",
+  "https://scontent.fsal2-1.fna.fbcdn.net/v/t39.30808-6/276139425_101439625870729_396991921636436698_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=730e14&_nc_ohc=haT40vRH314AX8cGNWo&_nc_ht=scontent.fsal2-1.fna&oh=00_AT_8YVSDYgvCiqhq32YVerXUpEgD92mnlhvvUKbORBFB0g&oe=624B7034",
 ];
 // colocando dimensiones
 const width = Dimensions.get("window").width;
@@ -215,10 +215,10 @@ const styles = StyleSheet.create({
   },
    posterImage: {
     width: "100%",
-    height: '50%',
+    height: ancho_del_contenedor * 1.2,
     resizeMode: "cover",
     borderRadius: 20,
-    marginBottom:'150%'
+    marginBottom:'60%'
    
   },
   viewrecargas:{
@@ -314,4 +314,7 @@ const styles = StyleSheet.create({
           color:'#ffffff',
           textAlign:'center'
         }
+        
+          
+  
   })
