@@ -39,7 +39,7 @@ const Services =() => {
           </View>
         </TouchableOpacity>
       </View> 
-    </SafeAreaView>
+</SafeAreaView>
   )
 }
     
@@ -49,8 +49,6 @@ const styles = StyleSheet.create({
 container:{
   flex: 1,
   alignItems:'center',
-  alignContent:'center',
-  backgroundColor:'#ffffff'
 },
 viewservices1:{
   padding:10,
@@ -128,5 +126,6 @@ titulo:{
       color:'#0E4C59',
       textAlign:'center'
   
-    }
-})
+    },
+
+  })

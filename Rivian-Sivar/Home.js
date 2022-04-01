@@ -219,6 +219,7 @@ const styles = StyleSheet.create({
     resizeMode: "cover",
     borderRadius: 20,
     marginBottom:'150%'
+
    
   },
   viewrecargas:{

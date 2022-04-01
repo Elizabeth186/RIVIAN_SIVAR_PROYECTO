@@ -3,9 +3,6 @@ import { SafeAreaView, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/core';
 import { auth } from './firebase';
 
-
-
-
 const AboutRivian =() => {
 
   const navigation = useNavigation()

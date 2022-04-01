@@ -139,6 +139,6 @@ borderBottomWidth:2
     marginTop:'5%',
     color:'#0E4C59',
     marginBottom:'2%'
-
   }
-})
+
+  })
