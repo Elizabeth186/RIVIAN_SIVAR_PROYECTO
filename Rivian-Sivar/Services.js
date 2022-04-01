@@ -42,7 +42,7 @@ container:{
 },
 viewtitle:{
 width:475,
-height:100,
+height:75,
 backgroundColor:'#154C59',
 borderRadius: 10,
 marginBottom:'5%'
@@ -59,7 +59,6 @@ txttitulo:{
   width:'100%',
   height:'100%',
   textAlign:'center',
-  fontFamily:'Serif',
   color:'#ffffff',
   marginTop:'5%',
   fontWeight:'bold'
