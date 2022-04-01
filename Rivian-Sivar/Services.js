@@ -1,44 +1,31 @@
 import React from 'react';
-import { SafeAreaView, Text, TouchableOpacity,View,Image, StyleSheet } from 'react-native';
+import { SafeAreaView, Text, ScrollView,View,Image, StyleSheet } from 'react-native';
+import { backgroundColor, color } from 'react-native/Libraries/Components/View/ReactNativeStyleAttributes';
+
 
 const Services =() => {
-
-
-
   return (
         <SafeAreaView style={styles.container}>
-      <View style={styles.titulo}>
-      <Text style={styles.txttitulo}>Conoce mas sobre
-      nuestros servicios</Text>
+     
+        <View style={styles.viewtitle}>
+      <Text style={styles.txttitulo}>SERVICIOS</Text>
       </View>
-      <View style={styles.viewservices1} >
-        <TouchableOpacity style={styles.local1}>
-            <View style={{flexDirection:'column'}}>
-          <Text style={styles.txt}>Seguros</Text>
-          </View>
-        </TouchableOpacity>
+      <ScrollView style={styles.scrollviewestyle}>
+      <View style={{width:'100%', height:'100%'}}>
+     
+      <Image style={styles.img}
+              source={require("./assets/seguro.png")  }/>
+              <Image style={styles.img}
+              source={require("./assets/taller.png")  }/>
+              <Image style={styles.img}
+              source={require("./assets/carga.png")  }/>
+              <Image style={styles.img}
+              source={require("./assets/herramientas.png")  }/>
+     
       </View>
-      <View style={styles.viewservices2} >
-        <TouchableOpacity style={styles.local1}>
-           <View style={{flexDirection:'column'}}>
-          <Text style={styles.txt}>Talleres</Text>
-          </View>
-        </TouchableOpacity>
-      </View>
-      <View style={styles.viewservices3} >
-        <TouchableOpacity style={styles.local1}>
-           <View style={{flexDirection:'column'}}>
-          <Text style={styles.txt}>Estaciones de Recarga</Text>
-          </View>
-        </TouchableOpacity>
-      </View>
-      <View style={styles.viewservices4} >
-        <TouchableOpacity style={styles.local1}>
-           <View style={{flexDirection:'column'}}>
-          <Text style={styles.txt}>Repuestos</Text>
-          </View>
-        </TouchableOpacity>
-      </View> 
+      
+      
+      </ScrollView>
 </SafeAreaView>
   )
 }
@@ -48,84 +35,39 @@ export default Services
 const styles = StyleSheet.create({
 container:{
   flex: 1,
+  height:'100%',
   alignItems:'center',
+  alignContent:'center',
+  backgroundColor:'#ffffff'
 },
-viewservices1:{
-  padding:10,
-  alignItems:'center',
-  marginLeft:'10%',
-  marginRight:'10%',
-  marginTop:'15%',
-  borderColor:'#0E4C59',
-  borderWidth:1,
-  backgroundColor:'#ffffff',
-  width:'80%',
-  height:'10%',
-  borderRadius:13,
-  elevation:10
+viewtitle:{
+width:475,
+height:100,
+backgroundColor:'#154C59',
+borderRadius: 10,
+marginBottom:'5%'
 },
-viewservices2:{
-  padding:14,
-  alignItems:'center',
-  marginLeft:'10%',
-  marginRight:'10%',
-  marginTop:'8%',
-  borderColor:'#0E4C59',
-  borderWidth:1,
-  backgroundColor:'#ffffff',
-  width:'80%',
-  height:'10%',
-  borderRadius:13,
-  elevation:10
-},viewservices3:{
-  alignItems:'center',
-  marginLeft:'10%',
-  marginRight:'10%',
-  marginTop:'8%',
-  borderColor:'#0E4C59',
-  borderWidth:1,
-  backgroundColor:'#ffffff',
-  width:'80%',
-  height:'10%',
-  borderRadius:13,
-  elevation:10
-},viewservices4:{
-  padding:14,
-  alignItems:'center',
-  marginLeft:'10%',
-  marginRight:'10%',
-  marginTop:'8%',
-  borderColor:'#0E4C59',
-  borderWidth:1,
-  backgroundColor:'#ffffff',
-  width:'80%',
-  height:'10%',
-  borderRadius:13,
-  elevation:10
+img:{
+  width:400,
+  height:250,
+  marginTop: 20,
+  borderRadius: 12,
+  marginLeft:'8%'
 },
-txt:{
+txttitulo:{
+  fontSize:30,
+  width:'100%',
+  height:'100%',
   textAlign:'center',
-  marginTop:'7%',
-  color:'black',
-  fontWeight:'bold',
-  fontSize: 25,
-  height:'100%'
+  fontFamily:'Serif',
+  color:'#ffffff',
+  marginTop:'5%',
+  fontWeight:'bold'
 },
-titulo:{
-  width:'95%',
-  height:'10%',
-  marginBottom:"10%",
-  marginLeft:'2.5%',
-  borderRadius:15,
-  borderColor: '#0E4C59',
-  borderBottomWidth:2
-    },
-    txttitulo:{
-      fontSize:25,
-      marginTop:'5%',
-      color:'#0E4C59',
-      textAlign:'center'
-  
-    },
+scrollviewestyle:{
+  width:475,
+  alignContent:'center',
+ 
+}
 
   })
