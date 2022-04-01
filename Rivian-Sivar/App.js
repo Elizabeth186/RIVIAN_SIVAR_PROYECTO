@@ -1,3 +1,4 @@
+import'react-native-gesture-handler';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
@@ -37,6 +38,7 @@ export default function App() {
          <Stack.Screen name="Home"
         component={HomeScreen} 
         options={{ headerShown: false }} />
+        
       </Stack.Navigator>
     </NavigationContainer>
   );
