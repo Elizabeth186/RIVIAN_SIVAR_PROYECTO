@@ -215,10 +215,11 @@ const styles = StyleSheet.create({
   },
    posterImage: {
     width: "100%",
-    height: ancho_del_contenedor * 1.2,
+    height: '50%',
     resizeMode: "cover",
     borderRadius: 20,
-    marginBottom:'60%'
+    marginBottom:'150%'
+
    
   },
   viewrecargas:{
