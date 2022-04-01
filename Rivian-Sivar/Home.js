@@ -18,8 +18,9 @@ const imagenes = [
 // colocando dimensiones
 const width = Dimensions.get("window").width;
 const height = Dimensions.get("window").height;
+
 // declarando caracteristicas del contenedor de imagen
-const ancho_del_contenedor = width * 0.7;
+const ancho_del_contenedor = width * 0.85;
 // indicando las imagenes visibles en la pantalla
 const espacio_contenedores = (width -ancho_del_contenedor) / 2;
 const espacio = 4;
@@ -87,7 +88,7 @@ const scrollX = React.useRef(new Animated.Value(2)).current;
 return (
     
   <SafeAreaView style={styles.container}>
-    <ScrollView style={{width:"100%", height:'100%'}}>
+   
     <StatusBar hidden />
     <CrearCarrusel scrollX={scrollX} />
     <Animated.FlatList
@@ -115,7 +116,7 @@ return (
 // Altura de la animacon
         const scrollY = scrollX.interpolate({
           inputRange,
-          outputRange: [0, -30, 0],
+          outputRange: [0, -40, 0],
         });
         return (
           <View style={{ width: ancho_del_contenedor }}>
@@ -124,7 +125,7 @@ return (
                 marginHorizontal: espacio,
                 padding: espacio,
                 borderRadius: 30,
-                backgroundColor: "'#0E4C59",
+                backgroundColor: "'white",
                 alignItems: "center",
                 transform: [{ translateY: scrollY }],
               }}
@@ -136,42 +137,9 @@ return (
       }}
     />
     
-    <View style={styles.Recargar}>
-      <Text style={styles.textsuperior}>¿NO SABES DONDE</Text>
-      <Text style={styles.textinferior}>RECARGAR TU AUTO ELECTRICO?</Text>
-    </View>
-    <View style={styles.viewrecargas}>
-      <Text style={styles.textDepartamento}>Santa Tecla, San Salvador</Text>
-    </View>
-    <View style={styles.santatecla}>
-    <TouchableOpacity style={styles.santatecla1}  onPress={ ()=>{ Linking.openURL('https://goo.gl/maps/ckdPmkBWTBuDDLiz7')}}>
-      <Text style={styles.txtsantatecla1}>Texaco La Skina</Text>
-      <Image style={styles.images}
-          source={require("./assets/station.png")  }/>
-    </TouchableOpacity>
-    <TouchableOpacity style={styles.santatecla1}  onPress={ ()=>{ Linking.openURL('https://g.page/PlazaMalta?share')}}>
-      <Text style={styles.txtsantatecla2} >Comercial Plaza Malta</Text>
-      <Image style={styles.images}
-          source={require("./assets/electrics.png")  }/>
-    </TouchableOpacity>
-  </View>
-  <View style={styles.viewrecargas2}>
-      <Text style={styles.textDepartamento}>Santa Ana, San Salvador</Text>
-    </View>
-  <View style={styles.santana} >
-  <TouchableOpacity style={styles.santaana1}  onPress={ ()=>{ Linking.openURL('https://goo.gl/maps/GqVcDwjwJspEX3H1A')}}>
-      <Text style={styles.txtCasaverde}>Hotel Casa Verde</Text>
-      <Image style={styles.images}
-          source={require("./assets/electrics.png")  }/>
-    </TouchableOpacity>
-  </View>
-   <View >
-   <TouchableOpacity style={styles.btn}
-     onPress={SignOut}>
-     <Text>Cerrar Sesion</Text>
-   </TouchableOpacity>
-</View>
-</ScrollView>
+    
+   
+
 </SafeAreaView>
 )
 
@@ -215,10 +183,10 @@ const styles = StyleSheet.create({
   },
    posterImage: {
     width: "100%",
-    height: '50%',
+    height: '100%',
     resizeMode: "cover",
     borderRadius: 20,
-    marginBottom:'150%'
+    
 
    
   },
