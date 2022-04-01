@@ -14,23 +14,23 @@ const Sucursales = () => {
         <TouchableOpacity style={styles.local1}
           onPress={() => { Linking.openURL('https://goo.gl/maps/GqVcDwjwJspEX3H1A') }}>
            <Image style={styles.image1}
-            source={require("./assets/Location.png")} />
+            source={require("./assets/garage.png")} />
             <View style={{flexDirection:'column'}}>
           <Text style={styles.txtS1}>San Salvador</Text>
-          <Text style={styles.txtS2}>Bulevar venezuela, km 12,
-          local #45, {"\n"}frente a Galvaniza</Text>
+          <Image style={styles.imageempresa}
+           source={require("./assets/nombreempresa.png")} />
           </View>
         </TouchableOpacity>
       </View>
       <View style={styles.viewlocal1} >
-        <TouchableOpacity style={styles.local2}
+        <TouchableOpacity style={styles.local1}
           onPress={() => { Linking.openURL('https://goo.gl/maps/GqVcDwjwJspEX3H1A') }}>
-           <Image style={styles.image2}
-           source={require("./assets/Location.png")} />
+           <Image style={styles.image1}
+           source={require("./assets/garage.png")} />
            <View style={{flexDirection:'column'}}>
-          <Text style={styles.txtL1}>La libertad</Text>
-          <Text style={styles.txtL2}>Santa Tecla, calle poniente,{"\n"}
-          76 avenida norte</Text>
+          <Text style={styles.txtS1}>La libertad</Text>
+          <Image style={styles.imageempresa2}
+           source={require("./assets/nombreempresa.png")} />
           </View>
         </TouchableOpacity>
       </View>
@@ -56,18 +56,33 @@ const styles = StyleSheet.create({
     borderColor:'#0E4C59',
     borderWidth:4,
     width:'80%',
-    height:'16%',
+    height:'20%',
     borderRadius:13,
     elevation:15
   },viewlocal2:{
     alignItems:'center',
     marginTop:'3%',
     width:'16%',
-    height:'20%',
+    height:'30%',
     borderColor:'#0E4C59',
     borderWidth:2,
     borderRadius:12,
     elevation:15
+    
+  },
+  imageempresa:{
+    padding:13,
+    width:'100%',
+    height:'10%',
+    marginLeft:'20%',
+    marginTop:"10%"
+  },
+  imageempresa2:{
+    padding:13,
+    width:'110%',
+    height:'10%',
+    marginLeft:'20%',
+    marginTop:"10%"
   },
   image1:{
     width:'20%',
@@ -75,41 +90,22 @@ const styles = StyleSheet.create({
     marginTop:'5%',
     marginLeft:'5%'
   },
-
-   image2:{
-    width:'20%',
-    height:'60%',
-    marginTop:'5%',
-    marginLeft:'5%'
-  },
   local1:{
-backgroundColor:'#307B8C',
+backgroundColor:'#ffffff',
 width:'100%',
 height:'100%',
 flexDirection:'row',
 borderRadius:9
   },
-  local2:{
-    backgroundColor:'#307B8C',
-    width:'100%',
-    height:'100%',
-    flexDirection:'row',
-    borderRadius:9
-  },
   txtS1:{
     textAlign:'center',
     marginTop:'10%',
-    color:'#ffffff',
+    color:'#307B8C',
     fontWeight:'bold',
-    fontSize: 25
+    fontSize: 25,
+    marginLeft:'20%'
   },
-  txtS2:{
-    textAlign:'center',
-    marginTop:'5%',
-    color:'#ffffff',
-    fontWeight:'bold',
-    marginLeft:'5%'
-  },
+  
   txtL1:{
     textAlign:'center',
     marginTop:'10%',
@@ -117,28 +113,22 @@ borderRadius:9
     fontWeight:'bold',
     fontSize: 25
   },
-  txtL2:{
-    textAlign:'center',
-    marginTop:'5%',
-    color:'#ffffff',
-    fontWeight:'bold',
-    marginLeft:'5%'
-  },
   titulo:{
-width:'95%',
-height:'10%',
-marginBottom:"10%",
-marginLeft:'2.5%',
-borderRadius:15,
-borderColor: '#0E4C59',
-borderBottomWidth:2
+    width:'99%',
+    height:75,
+    backgroundColor:'#154C59',
+    borderRadius: 10,
+    marginBottom:'5%',
+marginLeft:'0.5%'
   },
   txttitulo:{
-    fontSize:25,
-   textAlign:'center',
+    fontSize:30,
+    width:'100%',
+    height:'100%',
+    textAlign:'center',
+    color:'#ffffff',
     marginTop:'5%',
-    color:'#0E4C59',
-    marginBottom:'2%'
+    fontWeight:'bold'
   }
 
   })
