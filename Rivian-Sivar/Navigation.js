@@ -5,9 +5,10 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {text, Dimensions} from 'react-native';
 import Home from './Home';
-import AboutRivian from './AboutRivian';
+import Modelos from './Modelos';
 import Services from './Services';
 import Sucursales from './Sucursales';
+import { MaterialCommunityIcons, Ionicons } from '@expo/vector-icons';
 
 
 const fullScreenWidth = Dimensions.get('window').width;
@@ -53,13 +54,14 @@ export default function Navigation(props){
             <Tab.Navigator 
                 style={screenOptions.tabBarStyle}>
                 <Tab.Screen name= 'Home' component={Home} options={{ headerShown: false }}/>
-                <Tab.Screen name= 'AboutRivian' component={AboutRivian} options={{ headerShown: false }}/>
+                <Tab.Screen name= 'Modelos' component={Modelos} options={{ headerShown: false }}/>
                 <Tab.Screen name= 'Services' component={Services} options={{ headerShown: false }}/>
                 <Tab.Screen name= 'Sucursales' component={Sucursales} options={{ headerShown: false }}/>
             </Tab.Navigator>
 
 
     )
+    
 }
 
 const screenOptions = {
