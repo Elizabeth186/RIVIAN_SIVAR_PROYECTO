@@ -1,6 +1,7 @@
 import React from 'react';
 import { SafeAreaView, Text,
-  View,Image, TouchableOpacity, StyleSheet, Linking } from 'react-native';
+  View,Image, TouchableOpacity, StyleSheet,ScrollView, Linking } from 'react-native';
+import { backgroundColor } from 'react-native/Libraries/Components/View/ReactNativeStyleAttributes';
 
 const Sucursales = () => {
 
@@ -8,27 +9,28 @@ const Sucursales = () => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.titulo}>
-      <Text style={styles.txttitulo}>Visita Nuestras Sucusales</Text>
+      <Text style={styles.txttitulo}>SUCURSALES</Text>
       </View>
+      
       <View style={styles.viewlocal1} >
         <TouchableOpacity style={styles.local1}
-          onPress={() => { Linking.openURL('https://goo.gl/maps/GqVcDwjwJspEX3H1A') }}>
+          onPress={() => { Linking.openURL('https://goo.gl/maps/wGAzjAortU7Z5QG58') }}>
            <Image style={styles.image1}
             source={require("./assets/garage.png")} />
-            <View style={{flexDirection:'column'}}>
+            <View style={styles.viewimage1}>
           <Text style={styles.txtS1}>San Salvador</Text>
-          <Image style={styles.imageempresa}
+          <Image style={styles.imageempresa1}
            source={require("./assets/nombreempresa.png")} />
           </View>
         </TouchableOpacity>
       </View>
-      <View style={styles.viewlocal1} >
-        <TouchableOpacity style={styles.local1}
-          onPress={() => { Linking.openURL('https://goo.gl/maps/GqVcDwjwJspEX3H1A') }}>
-           <Image style={styles.image1}
+      <View style={styles.viewlocal2} >
+        <TouchableOpacity style={styles.local2}
+          onPress={() => { Linking.openURL('https://goo.gl/maps/jCCXKaejPp4hcSkXA') }}>
+           <Image style={styles.image2}
            source={require("./assets/garage.png")} />
-           <View style={{flexDirection:'column'}}>
-          <Text style={styles.txtS1}>La libertad</Text>
+           <View style={styles.viewimage2}>
+          <Text style={styles.txtS2}>La libertad</Text>
           <Image style={styles.imageempresa2}
            source={require("./assets/nombreempresa.png")} />
           </View>
@@ -50,39 +52,28 @@ const styles = StyleSheet.create({
   },
   viewlocal1:{
     alignItems:'center',
-    marginLeft:'10%',
+    marginLeft:'5%',
     marginRight:'10%',
     marginBottom:'8%',
     borderColor:'#0E4C59',
     borderWidth:4,
-    width:'80%',
+    width:'90%',
     height:'20%',
     borderRadius:13,
     elevation:15
-  },viewlocal2:{
-    alignItems:'center',
-    marginTop:'3%',
-    width:'16%',
-    height:'30%',
-    borderColor:'#0E4C59',
-    borderWidth:2,
-    borderRadius:12,
-    elevation:15
-    
   },
-  imageempresa:{
-    padding:13,
-    width:'100%',
-    height:'10%',
-    marginLeft:'20%',
-    marginTop:"10%"
+  viewimage1:{
+    flexDirection:'column',
+    marginLeft:'5%', 
+    width:'45%',
+     backgroundColor:'#ffffff'
   },
-  imageempresa2:{
-    padding:13,
-    width:'110%',
-    height:'10%',
-    marginLeft:'20%',
-    marginTop:"10%"
+  imageempresa1:{
+    width:'130%',
+    height:'15%',
+    marginTop:"10%",
+   marginLeft:'10%'
+   
   },
   image1:{
     width:'20%',
@@ -95,7 +86,8 @@ backgroundColor:'#ffffff',
 width:'100%',
 height:'100%',
 flexDirection:'row',
-borderRadius:9
+borderRadius:9,
+backgroundColor:'#ffffff'
   },
   txtS1:{
     textAlign:'center',
@@ -103,23 +95,60 @@ borderRadius:9
     color:'#307B8C',
     fontWeight:'bold',
     fontSize: 25,
-    marginLeft:'20%'
+   width:'100%',
+   marginLeft:'5%'
   },
-  
-  txtL1:{
+  viewlocal2:{
+    alignItems:'center',
+    marginLeft:'5%',
+    marginRight:'10%',
+    marginBottom:'8%',
+    borderColor:'#0E4C59',
+    borderWidth:4,
+    width:'90%',
+    height:'20%',
+    borderRadius:13,
+    elevation:15
+  },
+  viewimage2:{
+    flexDirection:'column',
+    marginLeft:'5%', 
+    width:'40%',
+     backgroundColor:'#ffffff'
+  },
+  imageempresa2:{
+    width:'130%',
+    height:'15%',
+    marginTop:"10%",
+   marginLeft:'10%'
+  },
+  image2:{
+    width:'20%',
+    height:'60%',
+    marginTop:'5%',
+    marginLeft:'5%'
+  },
+  local2:{
+backgroundColor:'#ffffff',
+width:'100%',
+height:'100%',
+flexDirection:'row',
+borderRadius:9,
+backgroundColor:'#ffffff'
+  },
+  txtS2:{
     textAlign:'center',
     marginTop:'10%',
-    color:'#ffffff',
+    color:'#307B8C',
     fontWeight:'bold',
-    fontSize: 25
+    fontSize: 25,
+   width:'100%',
   },
   titulo:{
-    width:'99%',
+    width:'100%',
     height:75,
     backgroundColor:'#154C59',
-    borderRadius: 10,
     marginBottom:'5%',
-marginLeft:'0.5%'
   },
   txttitulo:{
     fontSize:30,
@@ -129,6 +158,46 @@ marginLeft:'0.5%'
     color:'#ffffff',
     marginTop:'5%',
     fontWeight:'bold'
+  },
+  cargas:{
+    width:'80%',
+    height:45,
+    backgroundColor:'#154C59',
+    marginBottom:'5%',
+    borderRadius:12,
+    marginLeft:'10%'
+  },
+  txtcarga1:{
+    fontSize:20,
+    width:'100%',
+    height:'100%',
+    textAlign:'center',
+    color:'#ffffff',
+    marginTop:'2%',
+    fontWeight:'bold'
+  },
+  btnhotel:{
+width:'40%',
+height:'180%'
+  },
+  viewhotel:{
+width:'100%',
+height:'10%',
+alignItems:'center',
+margin:'10%'
+  },
+  txthotel:{
+fontSize: 20,
+height:'70%',
+marginBottom:'5%'
+  },
+  imagehotel:{
+width:150,
+height:150,
+borderRadius:100,
+borderColor:'#154C59',
+borderWidth:3,
+alignItems:'center',
   }
 
   })
