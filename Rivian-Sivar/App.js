@@ -1,10 +1,10 @@
 import'react-native-gesture-handler';
-import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import LoginScreen from './LoginScreen';
 import HomeScreen from './HomeScreen';
+import Caracteristicas from './Caracteristicas';
 
 
 
@@ -38,6 +38,9 @@ export default function App() {
          <Stack.Screen name="Home"
         component={HomeScreen} 
         options={{ headerShown: false }} />
+        <Stack.Screen name="Caracteristicas"
+        component={Caracteristicas} 
+         />
         
       </Stack.Navigator>
     </NavigationContainer>

@@ -2,7 +2,6 @@ import { useNavigation } from '@react-navigation/core'
 import React, { useEffect, useState } from 'react'
 import { KeyboardAvoidingView, StyleSheet, Text,
    TextInput, TouchableOpacity, View, Image } from 'react-native'
-import { SafeAreaView } from 'react-navigation'
 import { auth } from './firebase'
 
 const LoginScreen = () => {
@@ -51,8 +50,8 @@ const LoginScreen = () => {
               source={require("./assets/LoginImg.png")  }/>
      </View>
        <View style={styles.viewEmpresa}>
-          <Text style={styles.textRivian}>RIVIAN </Text>
-          <Text style={styles.textSivar}>SIVAR</Text>
+       <Image style={styles.Imgnom}
+              source={require("./assets/nombreempresa.png")  }/>
       </View>
           <Text style={styles.textBienvenida}>BIENVENIDO</Text>
       <View style={styles.View1}>
@@ -107,7 +106,7 @@ export default LoginScreen
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: '6%',
+
     alignItems: 'center',
     backgroundColor: '#ffffff',
     
@@ -195,8 +194,11 @@ flexDirection:'row',
 width:300,
 backgroundColor: '#ffffff',
 borderRadius: 11,
-borderColor:'black',
-borderWidth: 1,
+borderBottomColor:'red',
+borderRightColor:'#FBBC05',
+borderLeftColor:'#4285F4',
+borderTopColor:'#34A853',
+borderWidth: 3,
 height:50
  },
    img:{
@@ -214,7 +216,10 @@ marginLeft:40,
      height:'100%'
   },
 viewEmpresa:{
-flexDirection:'row'
+width:'60%',
+height:'7.8%',
+marginLeft:'10%',
+marginTop:'5%'
 },
   textRivian:{
 fontSize:30,
@@ -229,6 +234,11 @@ padding:8,
     fontSize: 20,
     marginBottom: 25,
   
+  },
+  Imgnom:{
+   width: '100%',
+   height: '40%'
+
   }
  
 
