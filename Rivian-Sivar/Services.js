@@ -41,10 +41,9 @@ container:{
   backgroundColor:'#ffffff'
 },
 viewtitle:{
-width:475,
+width:'100%',
 height:75,
 backgroundColor:'#154C59',
-borderRadius: 10,
 marginBottom:'5%'
 },
 img:{
