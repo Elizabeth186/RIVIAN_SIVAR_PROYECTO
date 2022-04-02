@@ -1,10 +1,21 @@
 import React from 'react';
+import { useNavigation } from '@react-navigation/core';
 import { SafeAreaView, Text,
   View,Image, TouchableOpacity, StyleSheet,ScrollView, Linking } from 'react-native';
 import { backgroundColor } from 'react-native/Libraries/Components/View/ReactNativeStyleAttributes';
+import { auth } from './firebase';
 
 const Sucursales = () => {
+  const navigation = useNavigation()
 
+  const SignOut = () => {
+    auth
+      .signOut()
+      .then(() => {
+        navigation.replace("Login")
+      })
+      .catch(error => alert(error.message))
+  }
   
   return (
     <SafeAreaView style={styles.container}>
@@ -34,6 +45,14 @@ const Sucursales = () => {
           <Image style={styles.imageempresa2}
            source={require("./assets/nombreempresa.png")} />
           </View>
+        </TouchableOpacity>
+      </View>
+      <View style={styles.viewfinal}>
+      <Text style={styles.txtversion}>Version 1.0</Text>
+        <TouchableOpacity style={styles.btncerrarsesion}
+         onPress={SignOut}
+        >
+          <Text style={styles.txtcerrarsesion}>CERRAR SESION</Text>
         </TouchableOpacity>
       </View>
     </SafeAreaView>
@@ -198,6 +217,32 @@ borderRadius:100,
 borderColor:'#154C59',
 borderWidth:3,
 alignItems:'center',
-  }
+  },
+viewfinal:{
+  borderTopColor: "#154C59",
+  borderTopWidth:3,
+  width:'90%',
+  alignItems:'center',
+  marginLeft:'5%'
+},
+txtversion:{
+  color:'#8EBF24',
+  fontSize:15,
+  marginTop:'5%'
+},
+btncerrarsesion:{
+  width:'40%',
+  height:'17%',
+  marginTop:'10%',
+  borderColor:'red',
+  borderWidth:1,
+  borderRadius:10,
+  elevation:0.5
+},
+txtcerrarsesion:{
+  textAlign:'center',
+  marginTop:'5%',
+  color: "#154C59",
+}
 
   })
