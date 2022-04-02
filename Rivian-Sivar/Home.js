@@ -6,6 +6,7 @@ import { auth } from './firebase';
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { LinearGradient } from "expo-linear-gradient";
 import { Constants } from 'expo';
+
 const Home =(props) =>{
 // arrglo de imagenes
 const imagenes = [
