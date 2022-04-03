@@ -24,7 +24,9 @@ yarn global add expo-cli
 Antes de comenzar, asegurese de tener instaldo:
 
 Android Studio o Emulador nox
+
 Java JDK
+
 Git
 ## clonar repositorio
 Crear una carpeta donde se va a almacenar el archivo clonado
