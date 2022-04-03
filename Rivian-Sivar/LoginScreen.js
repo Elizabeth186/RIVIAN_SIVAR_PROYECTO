@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react'
 import { KeyboardAvoidingView, StyleSheet, Text,
    TextInput, TouchableOpacity, View, Image } from 'react-native'
 import { auth } from './firebase'
+import { GoogleSignin, statusCodes } from '@react-native-google-signin/google-signin';
+import { getAuth, getRedirectResult, GoogleAuthProvider } from "firebase/auth";
 
 const LoginScreen = () => {
   const [email, setEmail] = useState('')
@@ -37,6 +39,8 @@ const LoginScreen = () => {
       })
       .catch(error => alert(error.message))
   }
+
+
 
   return (
     
@@ -88,7 +92,7 @@ const LoginScreen = () => {
       </View>
         <View style={styles.Viewbtn3}>
         <TouchableOpacity
-          onPress={()=>{}}
+          onPress={auth}
           style={[styles.button3]}>
 
             <Image style={styles.img}
