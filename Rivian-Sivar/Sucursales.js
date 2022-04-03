@@ -47,14 +47,7 @@ const Sucursales = () => {
           </View>
         </TouchableOpacity>
       </View>
-      <View style={styles.viewfinal}>
-      <Text style={styles.txtversion}>Version 1.0</Text>
-        <TouchableOpacity style={styles.btncerrarsesion}
-         onPress={SignOut}
-        >
-          <Text style={styles.txtcerrarsesion}>CERRAR SESION</Text>
-        </TouchableOpacity>
-      </View>
+      
     </SafeAreaView>
   )
 }
@@ -74,6 +67,7 @@ const styles = StyleSheet.create({
     marginLeft:'5%',
     marginRight:'10%',
     marginBottom:'8%',
+    marginTop:'25%',
     borderColor:'#0E4C59',
     borderWidth:4,
     width:'90%',

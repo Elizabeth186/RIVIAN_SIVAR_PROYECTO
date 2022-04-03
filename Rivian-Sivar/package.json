@@ -10,7 +10,6 @@
     "eject": "expo eject"
   },
   "dependencies": {
-
     "@react-native-firebase/app": "^14.7.0",
     "@react-native-firebase/firestore": "^14.7.0",
     "@react-navigation/bottom-tabs": "^6.2.0",

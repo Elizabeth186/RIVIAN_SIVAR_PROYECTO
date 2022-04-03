@@ -3,7 +3,7 @@ import { SafeAreaView, Text, ScrollView,View,Image, StyleSheet } from 'react-nat
 import { backgroundColor, color } from 'react-native/Libraries/Components/View/ReactNativeStyleAttributes';
 
 
-const Services =() => {
+const Servicios =() => {
   return (
         <SafeAreaView style={styles.container}>
      
@@ -31,7 +31,7 @@ const Services =() => {
 }
     
 
-export default Services
+export default Servicios
 const styles = StyleSheet.create({
 container:{
   flex: 1,

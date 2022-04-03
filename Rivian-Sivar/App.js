@@ -4,7 +4,10 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import LoginScreen from './LoginScreen';
 import HomeScreen from './HomeScreen';
-import Caracteristicas from './Caracteristicas';
+import ModelR from './ModelR';
+import ModelS from './ModelS';
+import BuyModelR from './BuyModelR';
+import BuyModelS from './BuyModelS.js';
 
 
 
@@ -38,9 +41,17 @@ export default function App() {
          <Stack.Screen name="Home"
         component={HomeScreen} 
         options={{ headerShown: false }} />
-        <Stack.Screen name="Caracteristicas"
-        component={Caracteristicas} 
+        <Stack.Screen name="ModelR"
+        component={ModelR} options={{ headerShown: false }}
          />
+         <Stack.Screen name="ModelS"
+        component={ModelS} options={{ headerShown: false }}
+         />
+         <Stack.Screen name="BuyModelR"
+        component={BuyModelR} options={{ headerShown: false }}
+         /><Stack.Screen name="BuyModelS"
+         component={BuyModelS} options={{ headerShown: false }}
+          />
         
       </Stack.Navigator>
     </NavigationContainer>
