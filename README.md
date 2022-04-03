@@ -19,23 +19,6 @@ Es una aplicacion programada en React Native.
 npm install --global yarn
 ## expo
 yarn global add expo-cli
-## Firebase
-npm install firebase
-
-npm add @react-native-firebase/app
-
-## Navegacion
-npm install @react-navigation/native
-
-npm install react-native-screens react-native-safe-area-context
-
-npm install @react-navigation/native-stack
-
-npm install --save react-navigation react-native-gesture-handler 
-
-## Carrusel
-
-npm install react-native-looped-carousel --save
 
 # Autores
 Andrea Elizabeth Blanco Suarez
