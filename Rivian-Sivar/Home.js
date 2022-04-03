@@ -6,6 +6,7 @@ import { auth } from './firebase';
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { LinearGradient } from "expo-linear-gradient";
 import { Constants } from 'expo';
+
 const Home =(props) =>{
 // arrglo de imagenes
 const imagenes = [
@@ -18,11 +19,12 @@ const imagenes = [
 // colocando dimensiones
 const width = Dimensions.get("window").width;
 const height = Dimensions.get("window").height;
+
 // declarando caracteristicas del contenedor de imagen
-const ancho_del_contenedor = width * 0.7;
+const ancho_del_contenedor = width * 0.85;
 // indicando las imagenes visibles en la pantalla
 const espacio_contenedores = (width -ancho_del_contenedor) / 2;
-const espacio = 4;
+const espacio = 3;
 const altura_imagen_fondo = height;
 // funcion para funcionamiento de carrusel
 function CrearCarrusel({ scrollX }) {
@@ -87,7 +89,7 @@ const scrollX = React.useRef(new Animated.Value(2)).current;
 return (
     
   <SafeAreaView style={styles.container}>
-    <ScrollView style={{width:"100%", height:'100%'}}>
+   
     <StatusBar hidden />
     <CrearCarrusel scrollX={scrollX} />
     <Animated.FlatList
@@ -99,7 +101,7 @@ return (
       showsHorizontalScrollIndicator={false}
       horizontal={true}
       contentContainerStyle={{
-        paddingTop: 100,
+        paddingTop: 200,
         paddingHorizontal: espacio_contenedores,
       }}
       snapToInterval={ancho_del_contenedor}
@@ -115,7 +117,7 @@ return (
 // Altura de la animacon
         const scrollY = scrollX.interpolate({
           inputRange,
-          outputRange: [0, -30, 0],
+          outputRange: [0, -40, 0],
         });
         return (
           <View style={{ width: ancho_del_contenedor }}>
@@ -124,7 +126,7 @@ return (
                 marginHorizontal: espacio,
                 padding: espacio,
                 borderRadius: 30,
-                backgroundColor: "'#0E4C59",
+                backgroundColor: "'white",
                 alignItems: "center",
                 transform: [{ translateY: scrollY }],
               }}
@@ -136,42 +138,9 @@ return (
       }}
     />
     
-    <View style={styles.Recargar}>
-      <Text style={styles.textsuperior}>¿NO SABES DONDE</Text>
-      <Text style={styles.textinferior}>RECARGAR TU AUTO ELECTRICO?</Text>
-    </View>
-    <View style={styles.viewrecargas}>
-      <Text style={styles.textDepartamento}>Santa Tecla, San Salvador</Text>
-    </View>
-    <View style={styles.santatecla}>
-    <TouchableOpacity style={styles.santatecla1}  onPress={ ()=>{ Linking.openURL('https://goo.gl/maps/ckdPmkBWTBuDDLiz7')}}>
-      <Text style={styles.txtsantatecla1}>Texaco La Skina</Text>
-      <Image style={styles.images}
-          source={require("./assets/station.png")  }/>
-    </TouchableOpacity>
-    <TouchableOpacity style={styles.santatecla1}  onPress={ ()=>{ Linking.openURL('https://g.page/PlazaMalta?share')}}>
-      <Text style={styles.txtsantatecla2} >Comercial Plaza Malta</Text>
-      <Image style={styles.images}
-          source={require("./assets/electrics.png")  }/>
-    </TouchableOpacity>
-  </View>
-  <View style={styles.viewrecargas2}>
-      <Text style={styles.textDepartamento}>Santa Ana, San Salvador</Text>
-    </View>
-  <View style={styles.santana} >
-  <TouchableOpacity style={styles.santaana1}  onPress={ ()=>{ Linking.openURL('https://goo.gl/maps/GqVcDwjwJspEX3H1A')}}>
-      <Text style={styles.txtCasaverde}>Hotel Casa Verde</Text>
-      <Image style={styles.images}
-          source={require("./assets/electrics.png")  }/>
-    </TouchableOpacity>
-  </View>
-   <View >
-   <TouchableOpacity style={styles.btn}
-     onPress={SignOut}>
-     <Text>Cerrar Sesion</Text>
-   </TouchableOpacity>
-</View>
-</ScrollView>
+    
+   
+
 </SafeAreaView>
 )
 
@@ -188,133 +157,12 @@ const styles = StyleSheet.create({
     alignItems:'center',
     alignContent:'center',
   },
-  Recargar:{
-  borderColor: '#0E4C59',
-  borderWidth: 3,
-  height: '8%',
-  width:'90%',
-  marginTop:'10%',
-  marginLeft:'5%',
-  alignItems:'center',
-  borderRadius:12
-  },
-  textsuperior:{
-  fontSize: 30,
-  borderTopLeftRadius:5,
-  borderTopRightRadius:5,
-  backgroundColor:'#0E4C59',
-  width:'100%',
-  color:'#ffffff',
-  textAlign:'center'
-  },
-  textinferior:{
-  fontSize:16,
-  color:'#307B8C',
-  fontSize: 20,
-  fontWeight:'bold'
-  },
    posterImage: {
     width: "100%",
-    height: "50%",
+    height:'90%' ,
     resizeMode: "cover",
     borderRadius: 20,
-    marginBottom:'250%'
-   
-  },
-  viewrecargas:{
-    alignItems:'center',
-    borderColor:'#307B8C',
-    borderWidth:0.5,
-    marginTop:'5%',
-    marginBottom:'5%',
-    width:'97%',
-    backgroundColor:'#307B8C',
-    borderBottomRightRadius:15,
-    borderTopRightRadius:15,
-    elevation: 2
-  },
-  viewrecargas2:{
-    marginLeft:'3%',
-    borderColor:'#307B8C',
-    borderWidth:0.5,
-    marginTop:'5%',
-    marginBottom:'5%',
-    width:'97%',
-    backgroundColor:'#307B8C',
-    borderBottomLeftRadius:15,
-    borderTopLeftRadius:15,
-    elevation: 2
-  },
-        santaana1:{
-          backgroundColor:'#8EBF24',
-          width:'40%',
-          height:'100%',
-          borderColor:'#0E4C59',
-          borderWidth:2,
-          borderRadius:15,
-          alignItems:'center',
-          elevation:20
-          },
-          santana:{
-            width:"100%",
-            alignItems:'center',
-            marginTop:"5%",
-            height:'15%'
-          },
-          txtCasaverde:{
-            marginTop:'5%',
-            marginRight:'3%',
-            textAlign:'center',
-            color:'#0E4C59',
-            fontSize: 20
-          },
-          images:{
-            padding:12,
-            height: '50%',
-            width:'50%',
-            marginTop:'10%',
-          },
-          santatecla:{
-            height:'15%',
-            width:'100%',
-            flexDirection:'row',
-            alignSelf:'center',
-            alignContent:'center',
-            alignItems:'center',
-            
-            },
-            santatecla1:{
-            alignItems:'center',
-              backgroundColor:'#8EBF24',
-              width:'40%',
-              height:'100%',
-              borderColor:'#0E4C59',
-              borderWidth:2,
-              borderRadius:15,
-              marginLeft:'6%',
-              elevation:20
-              },
-        txtsantatecla1:{
-          marginTop:'5%',
-          marginRight:'6%',
-          textAlign:'center',
-          color:'#0E4C59',
-          fontSize: 20
-        },
-        txtsantatecla2:{
-          marginTop:'5%',
-          marginRight:'6%',
-          color:'#0E4C59',
-          fontSize: 20,
-          textAlign:'center'
-        
-        },
-        textDepartamento:{
-          fontSize:30,
-          color:'#ffffff',
-          textAlign:'center'
-        }
-        
-          
-  
+    borderColor:'#ffffff',
+    borderWidth:5
+   }
   })

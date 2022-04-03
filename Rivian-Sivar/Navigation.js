@@ -1,50 +1,22 @@
 import React from 'react';
-
 import {NavigationContainer} from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {text, Dimensions} from 'react-native';
+import AntDesign from 'react-native-vector-icons/AntDesign'
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
+import {text, Dimensions, StyleSheet} from 'react-native';
 import Home from './Home';
 import Modelos from './Modelos';
-import Services from './Services';
+import Servicios from './Servicios';
 import Sucursales from './Sucursales';
-import { MaterialCommunityIcons, Ionicons } from '@expo/vector-icons';
+import Perfil from './Perfil';
 
 
 const fullScreenWidth = Dimensions.get('window').width;
 
 const Stack = createNativeStackNavigator();
 
-// function ModelsStackScreen( ){
-//     return(
-//         <Stack.Navigator >
-//             <Stack.Screen name = 'Models' component= {Models}/>
-//         </Stack.Navigator>
-//     )
-// }
 
-// function AboutRiviansStackScreen( ){
-//     return(
-//         <Stack.Navigator>
-//             <Stack.Screen name = 'AboutRivian' component= {AboutRivian}/>
-//         </Stack.Navigator>
-//     )
-// }
-// function ServicesStackScreen( ){
-//     return(
-//         <Stack.Navigator>
-//             <Stack.Screen name = 'Services' component= {Services}/>
-//         </Stack.Navigator>
-//     )
-// }
-
-// function SucursalesStackScreen( ){
-//     return(
-//         <Stack.Navigator>
-//             <Stack.Screen name = 'Sucursales' component= {Sucursales}/>
-//         </Stack.Navigator>
-//     )
-// }
 
 const Tab  = createBottomTabNavigator();
 
@@ -52,27 +24,47 @@ export default function Navigation(props){
     return (
 
             <Tab.Navigator 
-                style={screenOptions.tabBarStyle}>
-                <Tab.Screen name= 'Home' component={Home} options={{ headerShown: false }}/>
-                <Tab.Screen name= 'Modelos' component={Modelos} options={{ headerShown: false }}/>
-                <Tab.Screen name= 'Services' component={Services} options={{ headerShown: false }}/>
-                <Tab.Screen name= 'Sucursales' component={Sucursales} options={{ headerShown: false }}/>
+                screenOptions={{headerShown: false, tabBarStyle: {backgroundColor: "#307b8c" },
+                tabBarInactiveTintColor: '#fff', tabBarActiveTintColor: '#91e4fb'}}>
+                <Tab.Screen name= 'Home' component={Home} options={{ tabBarIcon: ({color}) =>(
+                    <TabBarIcon name='home' color={color}/>
+                ),  headerShown: false}}/>
+                <Tab.Screen name= 'Modelos' component={Modelos} options={{ tabBarIcon: ({color}) =>(
+                    <TabBarIcon name='car' color={color}/>
+                ),  headerShown: false}}/>
+                <Tab.Screen name= 'Servicios' component={Servicios} options={{ tabBarIcon: ({color}) =>(
+                    <TabBarIcon name='sharealt' color={color}/>
+                ),  headerShown: false}}/>
+                <Tab.Screen name= 'Sucursales' component={Sucursales} options={{ tabBarIcon: ({color}) =>(
+                    <TabBarIcon1 name='storefront' color={color}/>
+                ),  headerShown: false}}/>
+                <Tab.Screen name= 'Perfil' component={Perfil} options={{ tabBarIcon: ({color}) =>(
+                    <TabBarIcon name='user' color={color}/>
+                ),  headerShown: false}}/>
             </Tab.Navigator>
 
 
     )
     
 }
+function TabBarIcon({name, color}){
+    return(
+        <AntDesign size={30} style={{marginBottom: -3}} name={name} color={color}/>
+        
+    );
+}
+function TabBarIcon1({name, color}){
+    return(
+        <MaterialIcons size={30} style={{marginBottom: -3}} name={name} color={color}/>
+        
+    );
+}
 
-const screenOptions = {
-    tabBarStyle:{
-        backgroundColor:'#0000ff',
-        height:100,
-        width: fullScreenWidth
-    },
+const style = StyleSheet.create({
+
     container: {
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
       }
-}
+})

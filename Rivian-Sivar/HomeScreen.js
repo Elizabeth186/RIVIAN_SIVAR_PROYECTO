@@ -1,10 +1,6 @@
 import React, { useCallback } from "react";
-import { Text, View, TouchableOpacity, StyleSheet,
-  Image, Dimensions, Animated, StatusBar, ScrollView, Button, Linking, TabBarIOSItem } from 'react-native'
 import Navigation from './Navigation';
 import UserContext from './UserContext';
-
-
 
 const HomeScreen =(props) => {
 return (
@@ -16,4 +12,3 @@ return (
 export default HomeScreen
  
   
-
