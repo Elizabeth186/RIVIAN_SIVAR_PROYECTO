@@ -9,6 +9,9 @@ const Modelos =() => {
 
   return (
     <SafeAreaView style={styles.container}>
+      <View style={styles.titulo}>
+      <Text style={styles.txttitulo}>MODELOS</Text>
+      </View>
           <View><Text style={styles.textStyle1}>RIVIAN R1</Text>
         
         <Image style={styles.image1} source={require("./assets/r5.jpg")  }/>
@@ -31,8 +34,22 @@ export default Modelos
 const styles = StyleSheet.create({
   container:{
     flex: 1,
-    paddingTop:'30%',
     alignItems: 'center',
+  },
+  titulo:{
+    width:'100%',
+    height:75,
+    backgroundColor:'#154C59',
+    marginBottom:'5%',
+  },
+  txttitulo:{
+    fontSize:30,
+    width:'100%',
+    height:'100%',
+    textAlign:'center',
+    color:'#ffffff',
+    marginTop:'5%',
+    fontWeight:'bold'
   },
   image1:{
     padding:12,
