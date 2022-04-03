@@ -20,6 +20,19 @@ npm install --global yarn
 ## expo
 yarn global add expo-cli
 
+# Guia de instalacion
+Antes de comenzar, asegurese de tener instaldo:
+
+Android Studio o Emulador nox
+Java JDK
+Git
+## clonar repositorio
+Crear una carpeta donde se va a almacenar el archivo clonado
+
+Desde esa misma carpeta abra 'Git Bash' y debe proceder a ejecutar los comandos proporcionados en este link https://docs.github.com/es/repositories/creating-and-managing-repositories/cloning-a-repository
+
+Realice las modificaciones necesarias, link de apoyo: https://www.freecodecamp.org/espanol/news/10-comandos-de-git-que-todo-desarrollador-deberia-saber/
+
 # Autores
 Andrea Elizabeth Blanco Suarez
 
