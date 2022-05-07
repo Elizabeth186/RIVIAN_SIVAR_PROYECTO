@@ -1,7 +1,7 @@
 import React from 'react';
-import { SafeAreaView,ScrollView, Text,View,Image, Button, StyleSheet, TouchableOpacity } from 'react-native';
+import { SafeAreaView, Text,View,Image, StyleSheet, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/core';
-import { auth } from './firebase';
+
 
 const Modelos =() => {
 
@@ -13,15 +13,11 @@ const Modelos =() => {
       <Text style={styles.txttitulo}>MODELOS</Text>
       </View>
           <View><Text style={styles.textStyle1}>RIVIAN R1</Text>
-        
         <Image style={styles.image1} source={require("./assets/r5.jpg")  }/>
         <TouchableOpacity style={styles.button1} onPress={() =>navigation.navigate('ModelR', { name: 'ModelR' })}><Text style={styles.buttonText1}>Ver</Text>
          </TouchableOpacity>
          </View>
-        
-
         <View style={styles.ViewModelsStyle1}><Text style={styles.textStyle2}>RIVIAN S1</Text>
-
         <Image style={styles.image2} source={require("./assets/s1.jpg")  }/>
         <TouchableOpacity style={styles.button1} onPress={() =>navigation.navigate('ModelS', { name: 'ModelS' })}><Text style={styles.buttonText1}>Ver</Text>
          </TouchableOpacity></View>
