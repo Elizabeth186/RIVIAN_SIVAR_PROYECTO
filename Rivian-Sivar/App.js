@@ -56,6 +56,7 @@ export default function App() {
           <Stack.Screen name="DetallesCita"
          component={DetallesCita} options={{ headerShown: false }}
           />
+         
         
       </Stack.Navigator>
     </NavigationContainer>

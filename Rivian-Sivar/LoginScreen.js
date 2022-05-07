@@ -5,7 +5,7 @@ import {
   TextInput, TouchableOpacity, View, Image
 } from 'react-native'
 import { auth } from './firebase'
-import { GoogleSignin, statusCodes } from '@react-native-google-signin/google-signin';
+
 import { getAuth, getRedirectResult, GoogleAuthProvider } from "firebase/auth";
 
 const LoginScreen = () => {
