@@ -19,23 +19,29 @@ Es una aplicacion programada en React Native.
 npm install --global yarn
 ## expo
 yarn global add expo-cli
-## Firebase
-npm install firebase
 
-npm add @react-native-firebase/app
+# Guia de instalacion
+Antes de comenzar, asegurese de tener instaldo:
 
-## Navegacion
-npm install @react-navigation/native
+Android Studio o Emulador nox
 
-npm install react-native-screens react-native-safe-area-context
+Java JDK
 
-npm install @react-navigation/native-stack
+Git
+## clonar repositorio
+Crear una carpeta donde se va a almacenar el archivo clonado
 
-npm install --save react-navigation react-native-gesture-handler 
+Desde esa misma carpeta abra 'Git Bash' y debe proceder a ejecutar los comandos proporcionados en este link https://docs.github.com/es/repositories/creating-and-managing-repositories/cloning-a-repository
 
-## Carrusel
+Realice las modificaciones necesarias, link de apoyo: https://www.freecodecamp.org/espanol/news/10-comandos-de-git-que-todo-desarrollador-deberia-saber/
+# Liks
+### trello
+https://trello.com/b/GKGJraRf/riviansivarapp
 
-npm install react-native-looped-carousel --save
+### Mock Ups
+https://lwqc7y.axshare.com/start.html#id=87b4c3&p=splash
+### Video
+https://youtu.be/Vrs9zD5xntM
 
 # Autores
 Andrea Elizabeth Blanco Suarez
