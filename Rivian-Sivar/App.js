@@ -8,6 +8,7 @@ import ModelR from './ModelR';
 import ModelS from './ModelS';
 import BuyModelR from './BuyModelR';
 import BuyModelS from './BuyModelS.js';
+import DetallesCita from './DetallesCita';
 
 
 
@@ -51,6 +52,9 @@ export default function App() {
         component={BuyModelR} options={{ headerShown: false }}
          /><Stack.Screen name="BuyModelS"
          component={BuyModelS} options={{ headerShown: false }}
+          />
+          <Stack.Screen name="DetallesCita"
+         component={DetallesCita} options={{ headerShown: false }}
           />
         
       </Stack.Navigator>
