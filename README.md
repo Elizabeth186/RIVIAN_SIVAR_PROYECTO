@@ -34,7 +34,7 @@ Crear una carpeta donde se va a almacenar el archivo clonado
 Desde esa misma carpeta abra 'Git Bash' y debe proceder a ejecutar los comandos proporcionados en este link https://docs.github.com/es/repositories/creating-and-managing-repositories/cloning-a-repository
 
 Realice las modificaciones necesarias, link de apoyo: https://www.freecodecamp.org/espanol/news/10-comandos-de-git-que-todo-desarrollador-deberia-saber/
-# Liks
+# Links
 ### trello
 https://trello.com/b/GKGJraRf/riviansivarapp
 
