@@ -12,6 +12,7 @@ const Modelos =() => {
       <View style={styles.titulo}>
       <Text style={styles.txttitulo}>MODELOS</Text>
       </View>
+      <ScrollView style={styles.scrollviewestyle}>
           <View><Text style={styles.textStyle1}>RIVIAN R1</Text>
         <Image style={styles.image1} source={require("./assets/r5.jpg")  }/>
         <TouchableOpacity style={styles.button1} onPress={() =>navigation.navigate('ModelR', { name: 'ModelR' })}><Text style={styles.buttonText1}>Ver</Text>
@@ -21,6 +22,7 @@ const Modelos =() => {
         <Image style={styles.image2} source={require("./assets/s1.jpg")  }/>
         <TouchableOpacity style={styles.button1} onPress={() =>navigation.navigate('ModelS', { name: 'ModelS' })}><Text style={styles.buttonText1}>Ver</Text>
          </TouchableOpacity></View>
+         </ScrollView>
     </SafeAreaView>
   )
 }

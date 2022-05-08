@@ -13,17 +13,16 @@ const ModelS = () => {
 
   useEffect(() => {
     fetch(autoURL)
-      .then((response) => response.json()) // get response, convert to json
+      .then((response) => response.json()) 
       .then((json) => {
         setData(json.Versiones);
         setTitle(json.title);
 
       })
-      .catch((error) => alert(error)) // display errors
-      .finally(() => setLoading(false)); // change loading state
+      .catch((error) => alert(error)) 
+      .finally(() => setLoading(false));  
   }, []);
 
-  // Also get call asynchronous function
   async function getMoviesAsync() {
     try {
       let response = await fetch(autoURL);
