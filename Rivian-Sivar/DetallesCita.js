@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { SafeAreaView,ScrollView,TextInput,View,Image, Button, StyleSheet, TouchableOpacity } from 'react-native';
-import { RadioButton } from 'react-native-paper';
+
 import { useNavigation } from '@react-navigation/core';
-import  DatePicker  from  'react-native-date-picker'
+
 
 
 const DetallesCita = () => {
