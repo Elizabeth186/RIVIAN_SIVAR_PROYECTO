@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { SafeAreaView, ActivityIndicator, FlatList, Text, View, Image, StyleSheet, TouchableOpacity } from 'react-native';
+import { SafeAreaView, ActivityIndicator, FlatList, Text, View, Image, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
 import { useNavigation } from '@react-navigation/core';
 
 
@@ -47,7 +47,7 @@ const ModelS = () => {
       {isLoading ? (
         <ActivityIndicator />
       ) : (
-        <View>
+        <ScrollView>
           <Text style={styles.title}>{title}</Text>
           <FlatList
             data={data}
@@ -60,7 +60,7 @@ const ModelS = () => {
                 <Text style={styles.textlist}>RECARGA: {item.RECARGA}</Text>
                 <Text style={styles.textlist}>PRECIO: {item.PRECIO}</Text>
                 <View style={{ marginBottom: 15, marginTop: 15 }}>
-      <TouchableOpacity style={styles.button1} onPress={() => navigation.navigate('BuyModelS', { name: 'BuyModelS' })}><Text style={styles.buttonText1}>Comprar</Text>
+      <TouchableOpacity style={styles.button1} onPress={() => navigation.navigate('BuyModelR', { name: 'BuyModelR' })}><Text style={styles.buttonText1}>Comprar</Text>
       </TouchableOpacity>
           </View>
               </View>
@@ -68,7 +68,7 @@ const ModelS = () => {
             
           />
    
-        </View>
+        </ScrollView>
         
       )}
      

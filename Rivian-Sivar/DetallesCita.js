@@ -17,10 +17,7 @@ const DetallesCita = () => {
       <SafeAreaView style={styles.container}>
     <View style={styles.viewcontainer} >
     <Text style={styles.textindicacion}>Completa los datos para{'\n'} agendar tu cita</Text>
-      <TextInput
-          placeholder="Nombre Completo"
-          style={styles.input1}
-        />
+
         <Text style={styles.text}>Fecha :</Text>
         <DatePicker
           style={styles.datePickerStyle}
