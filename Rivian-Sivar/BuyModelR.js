@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import { SafeAreaView,ScrollView, Text,View,Image, Button, StyleSheet, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/core';
+
 const BuyModelR=()=>{
-  
+  const navigation = useNavigation()
     return (
       <SafeAreaView style={styles.container}>
          <View><Text style={styles.textStyle1}>RIVIAN R1</Text>
@@ -24,7 +26,8 @@ const BuyModelR=()=>{
         <Text style={styles.textStyle31}>$ 12,000</Text>
         </View>
         </View>
-         <TouchableOpacity style={styles.button2}><Text style={styles.buttonText1}>Agendar Cita</Text>
+        <TouchableOpacity style={styles.button2}
+         onPress={() => navigation.navigate('DetallesCita', { name: 'DetallesCita' })} ><Text style={styles.buttonText1}>Agendar Cita</Text>
          </TouchableOpacity>
          <View style={styles.View1}></View>
       <View style={styles.View2}></View>

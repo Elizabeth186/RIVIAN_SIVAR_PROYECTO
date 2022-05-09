@@ -4,15 +4,15 @@ import {
   KeyboardAvoidingView, StyleSheet, Text,
   TextInput, TouchableOpacity, View, Image
 } from 'react-native'
-import { auth } from './firebase'
-
-import { getAuth, getRedirectResult, GoogleAuthProvider } from "firebase/auth";
+import { auth,  } from './firebase' // gtAuth, provider
+//import { signInWithPopup } from "firebase/auth";
 
 const LoginScreen = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
   const navigation = useNavigation()
+  
 
   useEffect(() => {
     const homenavigation = auth.onAuthStateChanged(user => {
@@ -31,6 +31,26 @@ const LoginScreen = () => {
       })
       .catch(error => alert(error.message))
   }
+  // function signUpWithGoogl (){
+  //   signInWithPopup(gtAuth, provider)
+  // .then((result) => {
+  //   // This gives you a Google Access Token. You can use it to access the Google API.
+  //   //const credential = GoogleAuthProvider.credentialFromResult(result);
+  //   //const token = credential.accessToken;
+  //   // The signed-in user info.
+  //   const user = result.user;
+  //   // ...
+  // }).catch((error) => {
+  //   // Handle Errors here.
+  //   const errorCode = error.code;
+  //   const errorMessage = error.message;
+  //   // The email of the user's account used.
+  //   const email = error.email;
+  //   // The AuthCredential type that was used.
+  //   const credential = GoogleAuthProvider.credentialFromError(error);
+  //   // ...
+  // });
+  // }
 
   const Login = () => {
     auth
@@ -41,6 +61,7 @@ const LoginScreen = () => {
       })
       .catch(error => alert(error.message))
   }
+
 
 
 
@@ -95,7 +116,7 @@ const LoginScreen = () => {
       <View style={styles.Viewbtn3}>
         <TouchableOpacity
 
-          onPress={() => { }}
+          onPress={() => {signUpWithGoogl}}
 
           style={[styles.button3]}>
 

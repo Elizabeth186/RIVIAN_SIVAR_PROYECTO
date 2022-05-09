@@ -1,5 +1,5 @@
 import React from 'react';
-import { SafeAreaView, Text,View,Image, StyleSheet, TouchableOpacity } from 'react-native';
+import { SafeAreaView, Text,View,Image, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
 import { useNavigation } from '@react-navigation/core';
 
 
