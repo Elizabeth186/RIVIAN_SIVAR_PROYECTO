@@ -9,6 +9,7 @@ import ModelS from './ModelS';
 import BuyModelR from './BuyModelR';
 import BuyModelS from './BuyModelS.js';
 import DetallesCita from './DetallesCita';
+import StripeGateway from './StripeGateway';
 
 
 
@@ -55,6 +56,9 @@ export default function App() {
           />
           <Stack.Screen name="DetallesCita"
          component={DetallesCita} options={{ headerShown: false }}
+          />
+          <Stack.Screen name="StripeGateway"
+         component={StripeGateway} options={{ headerShown: false }}
           />
          
         
